@@ -21,6 +21,9 @@ def on_press(key):
         print("Entering on press event for w")
         rospy.loginfo(str(1))# to print on  terminal 
         pub.publish(1)#to publish
+    elif hasattr(key, "char") and key.char == "e":
+        rospy.loginfo(str(2))# to print on  terminal 
+        pub.publish(2)#to publish
     print('{} pressed'.format(
         key))
 
